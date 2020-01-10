@@ -6,7 +6,7 @@ export default () => {
             <ul>
                 <li><a href="#/">Inicio</a></li>
                 <li><a href="#/knowUs">Conocenos</a></li>
-                <li><a href="#/signUp">Registrate</a></li>
+                <li><a href="#/">Registrate</a></li>
                 <li><a href="#/login">Ingresa</a></li>
             </ul>
         </nav>

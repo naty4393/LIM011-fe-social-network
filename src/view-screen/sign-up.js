@@ -1,3 +1,5 @@
+import { registerUser } from '../views-controller/register-user.js';
+
 export default () => {
   const mainSignUp = `   
     <header>
@@ -12,20 +14,24 @@ export default () => {
         </nav>
     </header>     
     <section>
+      <div id="formRegister">
         <form action="" method="get">
             <label for="name">Nombres:</label>
-            <input type="text" id="name">
+            <input type="text" id="name" required>
             <label for="lastName">Apellidos:</label>
-            <input type="text" id="lastName">
+            <input type="text" id="lastName" required>
             <label for="birthday">Cumpleaños:</label>
-            <input type="text" id="birthday" placeholder="dd/mm/aaaa">
+            <input type="text" id="birthday" placeholder="dd/mm/aaaa" required>
             <label for="mail">Correo:</label>
-            <input type="text" id="mail">
+            <input type="text" id="email" placeholder="email@email.com" required>
             <label for="password">Contraseña:</label>
-            <input type="password" id="password">
+            <input type="password" id="password" required>
             <label for="confirmPassword">Confirmar  Contraseña:</label>
-            <input type="password" id="confirmPassword">
+            <input type="password" id="confirmPassword" required>
+            <input type="button" id="cancel" value="Cancelar">
+            <input type="button" id="register" value="Registrar">
         </form>
+      </div>
     </section>
           `;
 
@@ -33,5 +39,11 @@ export default () => {
   divElement.innerHTML = mainSignUp;
   // eslint-disable-next-line no-console
   console.log(divElement);
-  return divElement;
+  const divFormRegister = divElement.querySelector('#formRegister');
+  const email = divElement.querySelector('#email');
+  const password = divElement.querySelector('#password');
+  divElement.querySelector('#register').addEventListener('click', () => {
+    registerUser(email.value, password.value, divFormRegister);
+  });
+  return divElement
 };
