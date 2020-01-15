@@ -1,8 +1,24 @@
-export const registerUser = (email, password, messageError) => {
+export const registerUser = (email, password, messageError, name, lastname, birthday, confirPassword ) => {
+  console.log(name);
+  
   const promise = firebase.auth().createUserWithEmailAndPassword(email, password);
   promise
     .then(() => {
-      window.location.hash = '#/login';
+      firebase.firestore().collection('users').add({
+        birthday,
+        confirPassword,
+        email,
+        lastname,
+        name,
+        password,
+      }).then(function(docRef) {
+        console.log('estoy aqui');
+        console.log("Document written with ID: ", docRef.id);
+        window.location.hash = '#/login'; 
+    })
+    .catch(function(error) {
+        console.error("Error adding document: ", error);
+    });
     }).catch((error) => {
     // Handle Errors here
       const p = document.createElement('p');

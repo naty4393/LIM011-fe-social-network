@@ -3,10 +3,10 @@ import { SignOutUser } from '../views-controller/sign-out.js'
 export default () => {
     const mainHome = ` 
           <header>
-          <a href="/#"><img src="" alt="">
+          <a href="#/"><img src="" alt=""></a>
               <nav id="nav">
                   <ul>
-                      <li><a href="#/perfilHome">Inicio</a></li>
+                      <li><a href="#/perfilHome">Home</a></li>
                       <li><a href="#/myAccount">Mi cuenta</a></li>
                       <li><a href="#/foroAll">Foro</a></li>
                       <li><a href="#/perfil">Perfil</a></li>
@@ -21,7 +21,7 @@ export default () => {
             <div src=""></div>
             <section>
               <div>
-                <textarea name="post" id="post" cols="30" rows="10"></textarea>
+                <textarea name="post" id="post" cols="30" rows="10" placeholder="¿Que hay de nuevo natalia?"></textarea>
               </div>
             </section>
           </section>

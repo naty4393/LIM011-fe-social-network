@@ -3,7 +3,7 @@ import { SignOutUser } from '../views-controller/sign-out.js'
 export default () => {
     const foroAllUser = ` 
           <header>
-          <a href="/#"><img src="" alt="">
+          <a href="#/"><img src="../imagen/images(2).jpg" alt=""></a>
               <nav id="nav">
                   <ul>
                       <li><a href="#/perfilHome">Inicio</a></li>
