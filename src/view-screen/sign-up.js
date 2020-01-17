@@ -48,7 +48,7 @@ export default () => {
   const email = divElement.querySelector('#email');
   const bodyElement = document.getElementById('body');
   bodyElement.setAttribute('class','background1');
-  divElement.querySelector('#register').addEventListener('click', () => {+
+  divElement.querySelector('#register').addEventListener('click', () => {
     console.log('datos',name.value, lastName.value, birthday.value, password.value, confirmPassword.value);
     
     registerUser(email.value, password.value, divFormRegister.value, name.value, lastName.value, birthday.value, confirmPassword.value);

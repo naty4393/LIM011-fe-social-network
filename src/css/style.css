@@ -17,6 +17,13 @@ body{
 .background1{
     width: 100%;
     background-image: url('../imagen/images\ \(2\).jpg');
+    height: 100%;
+    background-repeat: no-repeat;
+}
+.background2{
+    width: 100%;
+    background-image: url('../imagen/images\ \(1\)\ \(1\).jpg');
+    height: 100%;
     background-repeat: no-repeat;
 }
 .icon{
