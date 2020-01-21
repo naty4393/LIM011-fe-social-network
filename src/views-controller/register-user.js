@@ -1,8 +1,9 @@
+import { createUser } from './controller-firebase.js'
+
 export const registerUser = (email, password, messageError, name, lastname, birthday, confirPassword ) => {
   console.log(name);
   
-  const promise = firebase.auth().createUserWithEmailAndPassword(email, password);
-  promise
+  createUser(email, password)
     .then(() => {
       firebase.firestore().collection('users').add({
         birthday,

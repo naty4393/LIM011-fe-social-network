@@ -1,8 +1,8 @@
-/* const user = firebase.auth().currentUser; */
+import { loginUsers } from './controller-firebase.js';
 
 export const loginUser = (email, password) => {
-  const promise = firebase.auth().signInWithEmailAndPassword(email, password);
-  promise
+
+    loginUsers (email, password)
       .then(() => {
           firebase.auth().currentUser;
           window.location.hash = '#/perfilHome';

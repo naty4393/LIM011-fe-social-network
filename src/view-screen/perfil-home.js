@@ -22,7 +22,7 @@ export default () => {
             <div src=""></div>
             <section>
               <div>
-                <textarea name="post" id="post" cols="30" rows="10" placeholder="¿Que hay de nuevo natalia?"></textarea>
+                <textarea name="post" id="post" cols="30" rows="10" placeholder="¿Que hay de nuevo?"></textarea>
                 <p id="get">hola</p>
               </div>
             </section>

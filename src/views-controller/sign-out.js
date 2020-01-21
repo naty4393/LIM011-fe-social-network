@@ -1,6 +1,8 @@
+import { signOutUsers } from './controller-firebase.js'
+
 export const SignOutUser = () => {
-    const promise = firebase.auth().signOut();
-    promise
+
+    signOutUsers()
         .then(() => {
             window.location.hash = '#/login';
         }).catch((error) => {

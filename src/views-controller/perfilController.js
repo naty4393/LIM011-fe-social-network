@@ -1,6 +1,9 @@
+import { dataOfUsers } from './controller-firebase.js'
+
 export const dataUser = () => {
 
-    firebase.firestore().collection('user').doc(user.uid).get().then((doc) => {
+  dataOfUsers()
+    .then((doc) => {
         if (doc.exists) {
           console.log("Document data:", doc.data());
         } 

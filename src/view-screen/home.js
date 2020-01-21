@@ -13,7 +13,7 @@ export default () => {
                   </ul>
               </nav>
         </header>       
-        <section>
+        <section class="write-block">
           <h1>Bienvenid@</h1>
             <article>
               <p>Te invitamos a este espacio, TU ESPACIO, donde podrás compartir con muchas mas personas,

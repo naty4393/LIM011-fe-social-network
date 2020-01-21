@@ -17,19 +17,31 @@ export default () => {
 </header>    
     <section>
       <div id="formRegister">
-        <form action="" method="get">
-            <label for="name">Nombres:</label>
-            <input type="text" id="name" required>
+        <form action="" method="get" class="write-block-form form-register">
+            <div class="space-between-line">
+              <label for="name">Nombres:</label>
+              <input type="text" id="name" required>
+              </div>
+            <div class="space-between-line">
             <label for="lastName">Apellidos:</label>
             <input type="text" id="lastName" required>
+            </div>
+            <div class="space-between-line">
             <label for="birthday">Cumpleaños:</label>
             <input type="text" id="birthday" placeholder="dd/mm/aaaa" required>
+            </div>
+            <div class="space-between-line">
             <label for="email">Correo:</label>
             <input type="text" id="email" placeholder="email@email.com" required>
+            </div>
+            <div class="space-between-line">
             <label for="password">Contraseña:</label>
             <input type="password" id="password" required>
+            </div>
+            <div class="space-between-line">
             <label for="confirmPassword">Confirmar  Contraseña:</label>
             <input type="password" id="confirmPassword" required>
+            </div>
             <input type="button" id="cancel" value="Cancelar">
             <input type="button" id="register" value="Registrar">
         </form>
@@ -47,7 +59,7 @@ export default () => {
   const confirmPassword = divElement.querySelector('#confirmPassword');
   const email = divElement.querySelector('#email');
   const bodyElement = document.getElementById('body');
-  bodyElement.setAttribute('class','background1');
+  bodyElement.setAttribute('class','background-register');
   divElement.querySelector('#register').addEventListener('click', () => {
     console.log('datos',name.value, lastName.value, birthday.value, password.value, confirmPassword.value);
     

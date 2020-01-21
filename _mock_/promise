@@ -1,0 +1,4 @@
+new Promise ((resolve, reject)=>{
+    resolve('Promesa exitosa')
+    reject('Hubo un error')
+})

@@ -16,12 +16,18 @@ export default () => {
       </nav>
 </header>       
         <section>
-            <form action="" method="get">
+            <form action="" method="get" class="write-block-form">
+                <div class="space-between-line">
                 <label for="userName">Usuario:</label>
                 <input type="email" id="email" placeholder="email@email.com" required>
+                </div>
+                <div class="space-between-line">
                 <label for="password">Contraseña:</label>
                 <input type="password" id="password" required>
+                </div>
+                <div class="space-between-line">
                 <span>Se te olvido tu comtraseña....<a href="#/newPassword">Recuperar</a></span>
+                </div>
                 <input type="button" id="cancelar" value="Cancelar">
                 <input type="button" id="start" value="Iniciar">
             </form>
@@ -30,6 +36,8 @@ export default () => {
 
   const divElement = document.createElement('div');
   divElement.innerHTML = mainLogin;
+  const bodyElement = document.getElementById('body');
+  bodyElement.setAttribute('class','background-login');
   const email = divElement.querySelector('#email');
   const password = divElement.querySelector('#password');
   divElement.querySelector('#start').addEventListener('click',() => {

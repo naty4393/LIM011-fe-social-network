@@ -13,25 +13,24 @@ export default () => {
           </ul>
       </nav>
 </header>     
-    <section>
-    <h1>¿Que Significa PoWeR- Wo.!</h1>
+    <section class="center">
+    <h1 class="title text-shadow">¿Que Significa PoWeR- Wo ?</h1>
         <article>
-            <p>Power Wo, es una red social, en la cual las personas pueden ayudar a mas personas.</p>
-                <h3>Pero, Como se puede hacer eso...?</h3>
-            <p>Es de una manera mucho mas sencilla y mucho mas accesible para las personas, ya que
+            <p class="write-block-p">Power Wo, es una red social, en la cual las personas pueden ayudar a mas personas.</p>
+                <h3 class="title">Pero, Como se puede hacer eso...?</h3>
+            <p class="write-block-p">Es de una manera mucho mas sencilla y mucho mas accesible para las personas, ya que
                sabemos que es la era digital, y nos encanta publicar cosas; ahora por esta red publica
                cosas que van mas allá de solo likear una foto, sino que tambien puedes likear y un metodo de ayuda
                y para distintos temas</p> 
-                <h3>Y como funciona?</h3>
-            <p>Funciona de la siguiente manera...</p>
-                .....
+                <h3 class="title">Y como funciona?</h3>
+            <p class="write-block-p">Funciona de la siguiente manera...</p>
         </article>
     </section>
     `;
 
   const divElement = document.createElement('div');
   divElement.innerHTML = mainKnowsUs;
-  // eslint-disable-next-line no-console
-  console.log(divElement);
+  const bodyElement = document.getElementById('body');
+  bodyElement.setAttribute('class','background-knowsUs');
   return divElement;
 };
