@@ -27,10 +27,9 @@ export default () => {
         </article>
     </section>
     `;
-
   const divElement = document.createElement('div');
   divElement.innerHTML = mainKnowsUs;
   const bodyElement = document.getElementById('body');
-  bodyElement.setAttribute('class','background-knowsUs');
+  bodyElement.setAttribute('class', 'background-knowsUs');
   return divElement;
 };

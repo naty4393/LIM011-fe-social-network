@@ -1,4 +1,6 @@
-import { loginUser } from "../views-controller/login-user.js";
+import { loginUser } from '../views-controller/login-user.js';
+import { signInWithGmail } from '../views-controller/signInGmail.js';
+import { signInWithFacebook } from '../views-controller/signInFacebook.js';
 
 export default () => {
   const mainLogin = ` 
@@ -26,23 +28,33 @@ export default () => {
                 <input type="password" id="password" required>
                 </div>
                 <div class="space-between-line">
+                    <div id="gmail" class="icon-gplus icon"></div>
+                    <div type="button" id="face" class="icon-facebook-circled icon"></div>
+                </div>
+                <div class="space-between-line">
                 <span>Se te olvido tu comtraseña....<a href="#/newPassword">Recuperar</a></span>
                 </div>
                 <input type="button" id="cancelar" value="Cancelar">
-                <input type="button" id="start" value="Iniciar">
+                <input type="button" id="singIn" value="Iniciar">
             </form>
         </section>
         `;
-
   const divElement = document.createElement('div');
   divElement.innerHTML = mainLogin;
   const bodyElement = document.getElementById('body');
-  bodyElement.setAttribute('class','background-login');
+  bodyElement.setAttribute('class', 'background-login');
   const email = divElement.querySelector('#email');
   const password = divElement.querySelector('#password');
-  divElement.querySelector('#start').addEventListener('click',() => {
+  divElement.querySelector('#singIn').addEventListener('click', () => {
     loginUser(email.value, password.value);
-  })
-
+  });
+  divElement.querySelector('#gmail').addEventListener('click', () => {
+    console.log('ingreso para gmail');
+    signInWithGmail();
+  });
+  divElement.querySelector('#face').addEventListener('click', () => {
+    console.log('ingreso para facebook');
+    signInWithFacebook();
+  });
   return divElement;
 };

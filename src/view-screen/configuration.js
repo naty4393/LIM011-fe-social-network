@@ -1,7 +1,7 @@
-import { SignOutUser } from '../views-controller/sign-out.js'
+import { SignOutUser } from '../views-controller/sign-out.js';
 
 export default () => {
-    const mainHome = ` 
+  const mainHome = ` 
           <header>
           <a href="#/"><img src="../imagen/images(2).jpg" alt=""></a>
               <nav id="nav">
@@ -26,11 +26,10 @@ export default () => {
             </section>
           </section>
           `;
-  
-    const divElement = document.createElement('div');
-    divElement.innerHTML = mainHome;
-    divElement.querySelector('#signOff').addEventListener('click', () => {
-      SignOutUser();
-    })
-    return divElement;
-  };
+  const divElement = document.createElement('div');
+  divElement.innerHTML = mainHome;
+  divElement.querySelector('#signOff').addEventListener('click', () => {
+    SignOutUser();
+  });
+  return divElement;
+};

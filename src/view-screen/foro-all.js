@@ -1,7 +1,7 @@
-import { SignOutUser } from '../views-controller/sign-out.js'
+import { SignOutUser } from '../views-controller/sign-out.js';
 
-export default () => {
-    const foroAllUser = ` 
+export default (user) => {
+  const foroAllUser = ` 
           <header>
           <a href="#/"><img src="../imagen/images(2).jpg" alt=""></a>
               <nav id="nav">
@@ -19,6 +19,7 @@ export default () => {
           </header>       
           <section>
             <div src=""></div>
+            <p>${user.id}</p>
             <section>
               <div>
               <textarea name="post" id="post" cols="30" rows="10"></textarea>
@@ -26,11 +27,10 @@ export default () => {
             </section>
           </section>
           `;
-  
-    const divElement = document.createElement('div');
-    divElement.innerHTML = foroAllUser;
-    divElement.querySelector('#signOff').addEventListener('click', () => {
-      SignOutUser();
-    });
-    return divElement;
-  };
+  const divElement = document.createElement('div');
+  divElement.innerHTML = foroAllUser;
+  divElement.querySelector('#signOff').addEventListener('click', () => {
+    SignOutUser();
+  });
+  return divElement;
+};

@@ -28,7 +28,7 @@ HOME
 }
 section>h1{
     text-align: center;
-    margin-bottom: 20px;
+    margin:20px 0 20px 0;
     font-family:'myfont';
 }
 section>article{
@@ -53,11 +53,11 @@ section>article{
     height: 100%;
     background-repeat: no-repeat;
 }
-.background2{
+.background-perfilHome{
     width: 100%;
-    background-image: url('../imagen/images\ \(1\)\ \(1\).jpg');
+    background-image: url('../imagen/imagen2.jpeg');
     height: 100%;
-    background-repeat: no-repeat;
+
 }
 .icon{
     margin: 5px;
@@ -122,7 +122,6 @@ nav ul li>a:hover{
     } 
     nav ul li>a{
     margin: 0;
-    padding: 0;
     display: block;
     color: rgb(74, 63, 146);
     height: 10px;
@@ -139,7 +138,6 @@ nav ul li>a:hover{
     section>h1{
         text-align: center;
         margin:20px 0 20px 0;
-        font-family:'myfont';
     }
     .text-shadow{
         text-shadow: 0 0 10px rgba(255, 255, 255, 0.91);
@@ -147,9 +145,8 @@ nav ul li>a:hover{
     section>h3{
         text-shadow: 0 0 10px rgba(255, 255, 255, 0.91);
         text-align: center;
-        margin-bottom: 15px;
         font-family:'myfont';
-        margin: 5px;
+        margin: 15px 5px 5px 5px;
     }
     section>article{
         font-family: 'paraghaph';
