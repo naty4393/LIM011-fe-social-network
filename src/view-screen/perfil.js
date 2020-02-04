@@ -3,7 +3,7 @@ import { SignOutUser } from '../views-controller/sign-out.js';
 export default (user) => {
   const mainHome = ` 
           <header>
-          <a href="#/"><img src="" alt=""></a>
+          <a href="#/"><img src="../imagen/logo1.png" class="logo"></a>
               <nav id="nav">
                   <ul>
                       <li><a href="#/perfilHome">Inicio</a></li>

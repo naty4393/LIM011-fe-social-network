@@ -5,7 +5,7 @@ import { signInWithFacebook } from '../views-controller/signInFacebook.js';
 export default () => {
   const mainLogin = ` 
   <header>
-  <a href="#/"><img src="" alt=""></a>
+  <a href="#/"><img src="../imagen/logo1.png" class="logo"></a>
   <label  id="label-bar-menu" for="bar-menu" class="icon-menu-outline"></label>
   <input type="checkbox" name="bar-menu" id="bar-menu">
       <nav id="nav" class="nav">
@@ -18,9 +18,9 @@ export default () => {
       </nav>
 </header>       
         <section>
-            <form action="" method="get" class="write-block-form">
+            <form action="" method="get" class="write-block-form-login">
                 <div class="space-between-line">
-                <label for="userName">Usuario:</label>
+                <label for="userName">Usuario:</label><br>
                 <input type="email" id="email" placeholder="email@email.com" required>
                 </div>
                 <div class="space-between-line">
@@ -29,13 +29,13 @@ export default () => {
                 </div>
                 <div class="space-between-line">
                     <div id="gmail" class="icon-gplus icon"></div>
-                    <div type="button" id="face" class="icon-facebook-circled icon"></div>
+                    <div id="face" class="icon-facebook-circled icon"></div>
                 </div>
                 <div class="space-between-line">
                 <span>Se te olvido tu comtraseña....<a href="#/newPassword">Recuperar</a></span>
                 </div>
-                <input type="button" id="cancelar" value="Cancelar">
-                <input type="button" id="singIn" value="Iniciar">
+                <input type="button" id="cancelar" value="Cancelar" class="button">
+                <input type="button" id="singIn" value="Iniciar" class="button">
             </form>
         </section>
         `;

@@ -19,11 +19,16 @@ export const dataUsers = (res, email, name, birthday, lastname) => firebase.fire
 
 export const getInformation = id => firebase.firestore().collection('users').doc(id).get();
 
-export const savePost = (user, post, date, username, number) => firebase.firestore().collection('post').doc(user.uid).set({
-  number,
-  post,
-  date,
-  username,
-});
+const savePost = user => firebase.firestore().collection('post').doc(user.uid);
+
+export const storePost = (user, post, date, username, number) => savePost(user).collection('posts')
+  .doc(number).set({
+    number,
+    post,
+    date,
+    username,
+  });
+
+export const getPost = () => firebase.firestore().collection('posts');
 
 export const deletePost = user => firebase.firestore().collection('post').doc(user.uid).delete();

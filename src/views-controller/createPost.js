@@ -1,9 +1,7 @@
 import { deleteThePost } from './deletePost.js';
 
-/* let i = 0; */
+
 export const comment = (nameUser, post, number) => {
-/*   i += 1; */
-/*   const num = i; */
   console.log('ENTRO a commentar', nameUser);
   const comments = ` <section id="section${number}">
                         <h3 id="UserName">${nameUser.displayName}</h2>

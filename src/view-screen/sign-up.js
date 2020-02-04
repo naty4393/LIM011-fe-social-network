@@ -3,7 +3,7 @@ import { registerUser } from '../views-controller/register-user.js';
 export default () => {
   const mainSignUp = `   
   <header>
-  <a href="/#"><img src=""></a>
+  <a href="/#"><img src="../imagen/logo1.png" class="logo"></a>
   <label  id="label-bar-menu" for="bar-menu" class="icon-menu-outline"></label>
   <input type="checkbox" name="bar-menu" id="bar-menu">
       <nav id="nav" class="nav">
@@ -19,31 +19,31 @@ export default () => {
       <div id="formRegister">
         <form action="" method="get" class="write-block-form form-register">
             <div class="space-between-line">
-              <label for="name">Nombres:</label>
+              <label for="name" class="label-form">Nombres:</label>
               <input type="text" id="name" required>
-              </div>
-            <div class="space-between-line">
-            <label for="lastName">Apellidos:</label>
-            <input type="text" id="lastName" required>
             </div>
             <div class="space-between-line">
-            <label for="birthday">Cumpleaños:</label>
-            <input type="text" id="birthday" placeholder="dd/mm/aaaa" required>
+              <label for="lastName" class="label-form">Apellidos:</label>
+              <input type="text" id="lastName" required>
             </div>
             <div class="space-between-line">
-            <label for="email">Correo:</label>
-            <input type="text" id="email" placeholder="email@email.com" required>
+              <label for="birthday" class="label-form">Cumpleaños:</label>
+              <input type="text" id="birthday" placeholder="dd/mm/aaaa" required>
             </div>
             <div class="space-between-line">
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" required>
+              <label for="email" class="label-form">Correo:</label><br>
+              <input type="text" id="email" placeholder="email@email.com" required>
             </div>
             <div class="space-between-line">
-            <label for="confirmPassword">Confirmar  Contraseña:</label>
-            <input type="password" id="confirmPassword" required>
+              <label for="password" class="label-form">Contraseña:</label>
+              <input type="password" id="password" required>
             </div>
-            <input type="button" id="cancel" value="Cancelar">
-            <input type="button" id="register" value="Registrar">
+            <div class="space-between-line">
+              <label for="confirmPassword" class="label-form">Confirmar  Contraseña:</label>
+              <input type="password" id="confirmPassword" required>
+            </div>
+            <input type="button" id="cancel" value="Cancelar" class="button">
+            <input type="button" id="register" value="Registrar" class="button">
         </form>
       </div>
     </section>

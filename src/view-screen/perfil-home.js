@@ -1,6 +1,6 @@
 import { SignOutUser } from '../views-controller/sign-out.js';
-import { comment } from '../views-controller/createPost.js';
-import { savePost } from '../views-controller/controller-firebase.js';
+import { getThePosts } from '../views-controller/getPosts.js';
+import { storePost } from '../views-controller/controller-firebase.js';
 
 let number = 0;
 export default (user) => {
@@ -32,7 +32,7 @@ export default (user) => {
                   <option value="public">Público</option>
                   <option value="private">Privado</option>
                 </section>
-                <button id="share">Compartir</button>
+                <button id="share" class="button">Compartir</button>
               </div>
               <div id="addComment"></div>
             </section>
@@ -45,9 +45,10 @@ export default (user) => {
   bodyElement.setAttribute('class', 'background-perfilHome');
   divElement.querySelector('#share').addEventListener('click', () => {
     number += 1;
+    const num = `post${number}`;
     console.log('ingreso boton');
-    divElement.appendChild(comment(user, post.value, number));
-    savePost(user, post.value, new Date(), user.displayName, number);
+    storePost(user, post.value, new Date(), user.displayName, num);
+    getThePosts();
   });
   divElement.querySelector('#signOff').addEventListener('click', () => {
     SignOutUser();

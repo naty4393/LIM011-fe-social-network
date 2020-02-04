@@ -1,7 +1,7 @@
 export default () => {
   const mainKnowsUs = `
   <header>
-  <a href="/#"><img src=""></a>
+  <a href="/#"><img src="../imagen/logo1.jpeg" class="logo1"></a>
   <label  id="label-bar-menu" for="bar-menu" class="icon-menu-outline"></label>
   <input type="checkbox" name="bar-menu" id="bar-menu">
       <nav id="nav" class="nav">
