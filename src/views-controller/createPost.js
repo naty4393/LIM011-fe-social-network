@@ -1,15 +1,16 @@
-import { deleteThePost } from './deletePost.js';
+import { getThePosts } from './getPosts.js';
+/* import { deleteThePost } from './deletePost.js'; */
 
-
-export const comment = (nameUser, post, number) => {
-  console.log('ENTRO a commentar', nameUser);
-  const comments = ` <section id="section${number}">
-                        <h3 id="UserName">${nameUser.displayName}</h2>
-                        <h4 id="date"></h3>
-                        <p id="content"></p>
+export const getPostsOfAllUsers = (callback) => {
+  getThePosts((arr) => {
+    arr.forEach((array) => {
+      const comments = ` <section id="section">
+                        <h3 id="UserName" class="namePost">${array.name}</h2>
+                        <h4 id="date">${array.date}</h3>
+                        <p id="content">${array.sms}</p>
                         <ul>
                           <li><a id="editar">Editar</a></li>
-                          <li><a id="eliminar${number}" name="${number}">Eliminar</a></li>
+                          <li><a id="${array.id}" name="">Eliminar</a></li>
                         </ul>
                         <section>
                           <option value="publico">Público</option>
@@ -20,28 +21,17 @@ export const comment = (nameUser, post, number) => {
                         <label for=""></label>
                         <input type="checkbox" name="love" id="">
                       </section>`;
-  const spaceComment = document.createElement('div');
-  spaceComment.innerHTML = comments;
-  console.log('comments', comments);
-  console.log('spaceComment', spaceComment);
-  const content = spaceComment.querySelector('#content');
-  content.innerHTML = post;
-  const dateAndHours = spaceComment.querySelector('#date');
-  dateAndHours.innerHTML = new Date();
-  console.log('post', post);
-  console.log('content', content);
-  spaceComment.querySelector(`#eliminar${number}`).addEventListener('click', () => {
-    console.log('entro a la funcion borrar', number);
-    deleteThePost(nameUser);
-  /*   spaceComment.removeChild(); */
+      const spaceComment = document.createElement('div');
+      spaceComment.innerHTML = comments;
+      spaceComment.setAttribute('class', 'background-perfilHome');
+      console.log('comments', comments);
+      console.log('spaceComment', spaceComment);
+      /* spaceComment.querySelector('#eliminar').addEventListener('click', () => {
+        console.log('entro a la funcion borrar');
+        deleteThePost();
+        spaceComment.removeChild();
+      }); */
+      callback(spaceComment);
+    });
   });
-  /*   const dateAndHours = (() => {
-    const dateString = (new Date()).toString();
-    self.status = dateString.substring(0, 3 + dateString.lastIndexOf(':'));
-    setTimeout('dateAndHours()', 200);
-    return dateString;
-  });
-  window.onload = dateAndHours();
-  savePost(nameUser, post, dateAndHours, nameUser.displayName); */
-  return spaceComment;
 };

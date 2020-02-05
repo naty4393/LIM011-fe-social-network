@@ -1,6 +1,7 @@
 import { SignOutUser } from '../views-controller/sign-out.js';
 
-export default () => {
+export default (user) => {
+  console.log(user);
   const mainHome = ` 
           <header>
           <a href="#/"><img src="../imagen/logo1.png" class="logo"></a>

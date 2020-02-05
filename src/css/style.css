@@ -65,19 +65,13 @@ section>article{
     box-shadow: 10px 10px 10px 3px rgba(0, 0, 0, 0.2);
 }
 /* ------------------------------------------------------------------------------------
-
+Sign-Up
 ------------------------------------------------------------------------------------------- */
 .background-register{
     width: 100%;
     background-image: url('../imagen/fondo3.jpeg');
     height: 100%;
     background-repeat: no-repeat;
-}
-.background-perfilHome{
-    width: 100%;
-    background-image: url('../imagen/imagen2.jpeg');
-    height: 100%;
-
 }
 .icon{
     margin: 5px;
@@ -231,12 +225,20 @@ nav ul li>a:hover{
     .space-between-line{
         margin: 6px;
     }
+    /* ----------------------------------------------------------------------------------------
+    sign - up
+    -------------------------------------------------------------------------------------------- */
+    
     .background-register{
         background-image: url('../imagen/fondo3.jpeg');
         background-repeat: no-repeat;
         width: 100%;
         height: 100%;
     }
+    /* ----------------------------------------------------------------------------------------
+    login
+    -------------------------------------------------------------------------------------------- */
+    
     .write-block-form-login{
         color: rgb(255, 255, 255);
         width: 270px;
@@ -248,11 +250,23 @@ nav ul li>a:hover{
         box-shadow: 10px 10px 10px 3px rgba(110, 16, 98, 0.301);
         text-align: center;
     }
-    /* .write-block-form-login>div{
-        margin: 2px;
-    } */
     input{
         text-align: center;
         border-radius: 5px;
+    }
+    /* ----------------------------------------------------------------------------------------
+    Perfil-Home
+    -------------------------------------------------------------------------------------------- */
+    .background-perfilHome{
+        width: 100%;
+        background-image: url('../imagen/imagen2.jpeg');
+        height: 100%;
+    }
+    .photoIn{
+        height: 30px;
+    }
+    #UserName{
+        font-family: fantasy;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.91);
     }
 }

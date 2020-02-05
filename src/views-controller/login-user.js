@@ -13,3 +13,13 @@ export const loginUser = (email, password) => {
       console.log(errorMessage);
     });
 };
+
+export const photo = (user) => {
+  let photoUrl = '';
+  if (user.photoURL == null) {
+    photoUrl = '../imagen/usuario.png';
+  } else {
+    photoUrl = user.photoURL;
+  }
+  return photoUrl;
+};

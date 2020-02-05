@@ -4,6 +4,12 @@ export const createUser = (email, password) => firebase.auth().createUserWithEma
 // eslint-disable-next-line max-len
 export const loginUsers = (email, password) => firebase.auth().signInWithEmailAndPassword(email, password);
 
+/* export const personConnet = () => {
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) { console.log('conectado', user); }
+  });
+}; */
+
 export const SignGmail = provider => firebase.auth().signInWithPopup(provider);
 
 export const signOutUsers = () => firebase.auth().signOut();
@@ -29,6 +35,14 @@ export const storePost = (user, post, date, username, number) => savePost(user).
     username,
   });
 
-export const getPost = () => firebase.firestore().collection('posts');
+export const storePosts = (idUser, post, date, username, number) => firebase.firestore().collection('postsAllUsers').add({
+  idUser,
+  number,
+  post,
+  date,
+  username,
+});
+
+export const getPost = () => firebase.firestore().collection('postsAllUsers');
 
 export const deletePost = user => firebase.firestore().collection('post').doc(user.uid).delete();
