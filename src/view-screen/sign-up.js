@@ -54,6 +54,8 @@ export default () => {
   const name = divElement.querySelector('#name');
   const lastName = divElement.querySelector('#lastName');
   const birthday = divElement.querySelector('#birthday');
+  console.log(birthday);
+  
   const password = divElement.querySelector('#password');
   const confirmPassword = divElement.querySelector('#confirmPassword');
   const email = divElement.querySelector('#email');

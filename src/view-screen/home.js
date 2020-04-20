@@ -30,7 +30,7 @@ export default () => {
         `;
   const divElement = document.createElement('div');
   divElement.innerHTML = mainHome;
-  const bodyElement = document.getElementById('body');
+  const bodyElement = document.ElementById('body');
   bodyElement.setAttribute('class', 'background');
   return divElement;
 };

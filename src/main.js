@@ -9,10 +9,11 @@ function sleep(ms) {
 const init = async () => {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  while (firebase.auth().currentUser == null) {
+  console.log('user', firebase.auth().currentUser);
+/*   while (firebase.auth().currentUser == null) {
     // eslint-disable-next-line no-await-in-loop
     await sleep(1000);
-  }
+  } */
   /*   personConnet(); */
   changeViews(window.location.hash);
   window.addEventListener('hashchange', () => changeViews(window.location.hash));

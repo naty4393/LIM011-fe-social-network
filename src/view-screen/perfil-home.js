@@ -1,10 +1,10 @@
 import { SignOutUser } from '../views-controller/sign-out.js';
-import { getPostsOfAllUsers } from '../views-controller/createPost.js';
+import { postTemplate } from '../views-controller/createPost.js';
 import { storePost, storePosts } from '../views-controller/controller-firebase.js';
 import { photo } from '../views-controller/login-user.js';
 
 let number = 0;
-export default (user) => {
+export default (user, posts) => {
   const mainHome = ` 
             <header>
             <a href="#/"><img src="../imagen/logo1.png" class="logo"></a>
@@ -42,7 +42,10 @@ export default (user) => {
   divElement.innerHTML = mainHome;
   /* const divPost = divElement.querySelector('#addComment'); */
   const post = divElement.querySelector('#post');
-  getPostsOfAllUsers(dataPost => divElement.appendChild(dataPost));
+  // getPostsOfAllUsers(dataPost => divElement.appendChild(dataPost));
+  posts.forEach((postData) => {
+    divElement.appendChild(postTemplate(postData));
+  });
   bodyElement.setAttribute('class', 'background-perfilHome');
   divElement.querySelector('#share').addEventListener('click', () => {
     number += 1;
