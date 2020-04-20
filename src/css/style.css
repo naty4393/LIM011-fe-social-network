@@ -1,0 +1,272 @@
+@font-face{
+    font-family: 'myfont';
+    src: url('../fuentes/PollerOne-Regular.ttf');
+}
+@font-face{
+    font-family: 'paraghaph';
+    src: url('../fuentes/OldStandardTT-Bold.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    height: 50px;
+    background: rgba(255, 255, 255, 0.91);
+}
+body{
+    color: white;
+}
+.logo{
+    height: 70px;
+}
+.logo1{
+    height: 100px;
+}
+.button{
+    text-decoration: none;
+    color: black;
+    list-style: none;
+    font-family: 'myfont';
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px 3px rgba(0, 0, 0, 0.2);
+    margin: 6px;
+}
+
+/* ------------------------------------------------------------------------------------
+HOME
+------------------------------------------------------------------------------------------- */
+.background{
+    background-image: url('../imagen/fondo2.jpeg');
+    width: 100%;
+    height: 100%;
+}
+section>h1{
+    text-align: center;
+    margin:20px 0 20px 0;
+    font-family:'myfont';
+}
+section>article{
+    justify-content: center;
+    font-family: 'paraghaph';
+    font-size: 10px;
+}
+.write-block{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    width: 1000px;
+    margin:100px 0 0 100px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.534);
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 3px rgba(0, 0, 0, 0.2);
+}
+/* ------------------------------------------------------------------------------------
+Sign-Up
+------------------------------------------------------------------------------------------- */
+.background-register{
+    width: 100%;
+    background-image: url('../imagen/fondo3.jpeg');
+    height: 100%;
+    background-repeat: no-repeat;
+}
+.icon{
+    margin: 5px;
+}
+nav{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100vh;    
+    top: 100px;
+    left: 0;
+    background: rgba(74, 63, 146, 0.91);
+}
+#bar-menu{
+    display: block;
+}
+nav ul li>a{
+    display: block;
+    color: white;
+    height: 10px;
+    padding: 20px;
+    text-decoration: none;
+    border-bottom: 2.5px solid #fff;
+}
+nav ul li>a:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.91);
+}
+
+#bar-menu:checked~.nav {
+    transform: translateX(0%);
+}
+ nav>ul>li>a::selection~nav{
+    transition: all 0.7s;
+    transform: translateX(-100%);
+}
+@media (min-width:600px){
+    #label-bar-menu{
+        display: none;
+    }
+    #bar-menu{
+        display: none;
+    }
+    nav{
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0%);
+        float: center;
+        display: flex;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    nav ul{
+     display: flex;
+     flex-direction: row;
+     list-style: none;
+     text-decoration: none;
+     background-color: 0;
+    }
+    .container #label-bar-menu{
+        display: none;
+    } 
+    nav ul li>a{
+    margin: 0;
+    display: block;
+    color: rgb(74, 63, 146);
+    height: 10px;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 2.5px solid #fff;
+    }
+    /* ------------------------------------------------------------------------------------
+    HOME
+    ------------------------------------------------------------------------------------------- */
+    body>.center{
+        text-align: center;
+    }
+    section>h1{
+        text-align: center;
+        margin:20px 0 20px 0;
+    }
+    .text-shadow{
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.91);
+    }
+    section>h3{
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.91);
+        text-align: center;
+        font-family:'myfont';
+        margin: 15px 5px 5px 5px;
+    }
+    section>article{
+        font-family: 'paraghaph';
+        font-size: 20px;
+    }
+    .write-block{
+        color: rgb(255, 255, 255);
+        width: 670px;
+        height: 400px;
+        margin:70px 0 0 170px;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px 3px rgba(0, 0, 0, 0.2);
+    }
+    /* ----------------------------------------------------------------------------------------
+    know us
+    -------------------------------------------------------------------------------------------- */
+    .title{
+        color: black;
+        text-align: center;
+        margin-bottom: 20px;
+        font-family:'myfont';
+    }
+    .write-block-p{
+        text-align: center;
+        color: rgb(255, 255, 255);
+        width: 600px;
+        margin: 25px 0 25px 320px;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px 3px rgba(0, 0, 0, 0.2);
+    }
+    .background-knowsUs{
+        
+        background-image: url('../imagen/world.jpeg');
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+    }
+    .background-login{
+        background-image: url('../imagen/fondo.jpeg');
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+    }
+    .write-block-form{
+        color: rgb(255, 255, 255);
+        width: 270px;
+        height: 350px;
+        margin: 98px 0 25px 880px;
+        padding: 20px;
+        background-color: rgba(74, 63, 146, 0.91);
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px 3px rgba(110, 16, 98, 0.301);
+        text-align: center;
+    }
+    .label-form{
+        margin: 8px;
+    }
+    .space-between-line{
+        margin: 6px;
+    }
+    /* ----------------------------------------------------------------------------------------
+    sign - up
+    -------------------------------------------------------------------------------------------- */
+    
+    .background-register{
+        background-image: url('../imagen/fondo3.jpeg');
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+    }
+    /* ----------------------------------------------------------------------------------------
+    login
+    -------------------------------------------------------------------------------------------- */
+    
+    .write-block-form-login{
+        color: rgb(255, 255, 255);
+        width: 270px;
+        height: 200px;
+        margin: 98px 0 25px 880px;
+        padding: 20px;
+        background-color: rgba(74, 63, 146, 0.91);
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px 3px rgba(110, 16, 98, 0.301);
+        text-align: center;
+    }
+    input{
+        text-align: center;
+        border-radius: 5px;
+    }
+    /* ----------------------------------------------------------------------------------------
+    Perfil-Home
+    -------------------------------------------------------------------------------------------- */
+    .background-perfilHome{
+        width: 100%;
+        background-image: url('../imagen/imagen2.jpeg');
+        height: 100%;
+    }
+    .photoIn{
+        height: 30px;
+    }
+    #UserName{
+        font-family: fantasy;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.91);
+    }
+}
